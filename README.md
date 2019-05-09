@@ -1,4 +1,4 @@
-### Optimize-oil-rate-with-Genetic-Algorithms
+### Optimize oil rate with Genetic Algorithms
 
 Optimize oil rate with minimum gas lift rate using genetic algorithms.
 
