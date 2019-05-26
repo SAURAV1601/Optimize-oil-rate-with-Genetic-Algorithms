@@ -13,7 +13,13 @@ function WellData = create_individual(WellData)
 
 	WellData.Ds.Gd = Gd;
 	WellData.Ds.Ld = Ld;
+    
+    Ud = drift_flux(WellData);
+	WellData.Ud    = Ud;
 end
+
+% ===================================================================
+% Subfunction
 
 function Gd = gas_density(WellData)
 % Docstrings for gas_density
@@ -49,4 +55,25 @@ function Ld = liquid_density(WellData)
 	WOR = WellData.WOR;
 
 	Ld  = (Od + WOR * Wd) / (WOR + 1);
+end
+
+function Ud = drift_flux(WellData)
+	% Function to calculate drift flux function
+	% 
+	% PARAMETERS
+	% 
+	% 	WellData:	individual well data (type: struct)
+	% 
+	% RETURNS
+	% 
+	% 	Ud:			drift flux velocity.
+
+	assert (isstruct(WellData), 'Invalid input well data.');
+
+	Sl = WellData.Sl;
+	Gd = WellData.Ds.Gd;
+	Ld = WellData.Ds.Ld;
+	g  = WellData.g;
+
+	Ud = 1.53 * ((g * Sl * (Ld - Gd)) / Ld^2)^(1/4);
 end
