@@ -1,5 +1,9 @@
-function example(x, varargin)
-    disp(x);
-    A = varargin;
-    disp(A{3});
-end
+
+
+global fn;
+fn = @func;
+
+f = @p;
+
+d = f(1, 2);
+
