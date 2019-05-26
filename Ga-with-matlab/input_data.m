@@ -1,6 +1,10 @@
 function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-							  wor, wc, g, gc, D, L, Z, f, Co, Ud)
+							  wor, wc, g, gc, D, L, Z, f, Co, Sl)
 % Doc strings for input_data
+% 
+% PARAMETERS
+% 	Wd = Well data (type: struct)
+% 	Ds = Density
 % 
 % KEYWORD ARGUMENTS
 % 	Pr  = reservoir pressure
@@ -21,11 +25,7 @@ function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
 % 	Z   = gas compressibility factor
 % 	f   = friction factor
 % 	Co  = distribution factor
-% 	Ud  = drift flux velocity
-% 
-% RETURNS
-% 	Wd = Well data (type: struct)
-% 	Ds = Density
+% 	Sl  = liquid surface function
 
 	Wd = 62.37;
 	Od = Wd * Os;
@@ -40,6 +40,7 @@ function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
 				'WOR', wor, 'WC',  wc, ...
 				'g',   g,   'gc',  gc, ...
 				'D',   D,   'L',   L,  'Z',   Z, ...
-				'f',   f,   'Co',  Co, 'Ud',  Ud, ...
+				'f',   f,   'Co',  Co, 'Sl',  Sl, ...
 				'Ds',  Ds);
 end
+
