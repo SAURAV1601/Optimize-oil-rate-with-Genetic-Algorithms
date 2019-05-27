@@ -32,9 +32,10 @@ function data = get_data(well_data, create_one, create_full)
     f = 0.002;
     Co = 1.2;
     Sl = 49.6;
+    J = 2;
 
     W1 = well_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-              wor, wc, g, gc, D, L, Z, f, Co, Sl);
+              wor, wc, g, gc, D, L, Z, f, Co, Sl, J);
 
     W1 = create_one(W1);
 
@@ -59,9 +60,10 @@ function data = get_data(well_data, create_one, create_full)
     f = 0.002;
     Co = 1.2;
     Sl = 49.6;
+    J = 2.5;
 
     W2 = well_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-              wor, wc, g, gc, D, L, Z, f, Co, Sl);
+              wor, wc, g, gc, D, L, Z, f, Co, Sl, J);
 
     W2 = create_one(W2);
 
@@ -86,9 +88,10 @@ function data = get_data(well_data, create_one, create_full)
     f = 0.002;
     Co = 1.2;
     Sl = 49.6;
+    J = 3;
 
     W3 = well_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-              wor, wc, g, gc, D, L, Z, f, Co, Sl);
+              wor, wc, g, gc, D, L, Z, f, Co, Sl, J);
 
     W3 = create_one(W3);
 
@@ -113,9 +116,10 @@ function data = get_data(well_data, create_one, create_full)
     f = 0.002;
     Co = 1.2;
     Sl = 49.6;
+    J = 3.7;
 
     W4 = well_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-              wor, wc, g, gc, D, L, Z, f, Co, Sl);
+              wor, wc, g, gc, D, L, Z, f, Co, Sl, J);
 
     W4 = create_one(W4);
 
@@ -140,9 +144,10 @@ function data = get_data(well_data, create_one, create_full)
     f = 0.002;
     Co = 1.2;
     Sl = 49.6;
+    J = 2.5;
 
     W5 = well_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-              wor, wc, g, gc, D, L, Z, f, Co, Sl);
+              wor, wc, g, gc, D, L, Z, f, Co, Sl, J);
 
     W5 = create_one(W5);
 
