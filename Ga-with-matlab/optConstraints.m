@@ -10,8 +10,8 @@ function [c, c_eq] = optConstraints(x)
 	% 	c:		inequalities constraints
 	% 	c_eq:	equalities constraints
 
-	c 	 = [];
-	c_eq = x(1) + x(2) + x(3) + x(4) + x(5) - 0.4; ...
-%             x(6) + x(7) + x(8) + x(9) + x(10) - 1.17];
+	c    = [];
+%     c 	 = x(5) + x(6) + x(7) + x(8) - 1;
+	c_eq = x(1) + x(2) + x(3) + x(4) - 0.5;
 
 end
