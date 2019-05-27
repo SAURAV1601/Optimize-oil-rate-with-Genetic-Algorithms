@@ -1,5 +1,5 @@
 function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
-							  wor, wc, g, gc, D, L, Z, f, Co, Sl)
+							  wor, wc, g, gc, D, L, Z, f, Co, Sl, J)
 % Doc strings for input_data
 % 
 % PARAMETERS
@@ -26,6 +26,7 @@ function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
 % 	f   = friction factor
 % 	Co  = distribution factor
 % 	Sl  = liquid surface function
+%   J   = productivity index
 
 	Wd = 62.37;
 	Od = Wd * Os;
@@ -41,6 +42,6 @@ function Wd = input_data(Pr, Tr, Pw, Tw, Psc, Tsc, Gs, Ws, Os, ...
 				'g',   g,   'gc',  gc, ...
 				'D',   D,   'L',   L,  'Z',   Z, ...
 				'f',   f,   'Co',  Co, 'Sl',  Sl, ...
-				'Ds',  Ds);
+				'J',   J,   'Ds',  Ds);
 end
 
