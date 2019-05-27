@@ -17,9 +17,9 @@ Pfunc   = @penalty;
 
 % boundary condition
 
-n_vars  = 10;
-lower   = [0 0 0 0 0 0 0 0 0 0];
-upper   = [0.4 0.4 0.4 0.4 0.4 1 1 1 1 1];
+n_vars  = 8;
+lower   = [0 0 0 0 0 0 0 0];
+upper   = [0.5 0.5 0.5 0.5 1 1 1 1];
 const   = @optConstraints;
 
 % DO
