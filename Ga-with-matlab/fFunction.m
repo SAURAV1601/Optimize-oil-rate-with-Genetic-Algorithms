@@ -29,7 +29,11 @@ function f = fFunction(x)
 	wc2  = FULL.W2.WC;
 	wc3  = FULL.W3.WC;
 	wc4  = FULL.W4.WC;
-    wc5  = FULL.W5.WC;
+
+	J1   = FULL.W1.J;
+	J2   = FULL.W2.J;
+	J3   = FULL.W3.J;
+	J4   = FULL.W4.J;
 
 	Pw1  = FULL.W1.Pw;
 	Pr1  = FULL.W1.Pr;
@@ -42,24 +46,22 @@ function f = fFunction(x)
 
 	Pw4  = FULL.W4.Pw;
 	Pr4  = FULL.W4.Pr;
-    
-    Pw5  = FULL.W5.Pw;
-	Pr5  = FULL.W5.Pr;
 
 	lb   = 10;
 
-	f(1) = x(1) / ((1 - wc1) * x(6)) + ...
-			lb * max(0, rk4(0, Pw1 / Pr1, 0, 0.01, Pfunc, x(1), x(6), FULL.W1));
+	f(1) = x(1) / ((1 - wc1) * x(5)) + ...
+			lb * max(0, rk4(0, Pw1 / Pr1, 0, 0.01, Pfunc, x(1), x(5), FULL.W1) ...
+					- (1 - (x(5) / (J1 * Pr1))));
 
-	f(2) = x(2) / ((1 - wc2) * x(7)) + ...
-			lb * max(0, rk4(0, Pw2 / Pr2, 0, 0.01, Pfunc, x(2), x(7), FULL.W2));
+	f(2) = x(2) / ((1 - wc2) * x(6)) + ...
+			lb * max(0, rk4(0, Pw2 / Pr2, 0, 0.01, Pfunc, x(2), x(6), FULL.W2) ...
+					- (1 - (x(6) / (J2 * Pr2))));
 
-	f(3) = x(3) / ((1 - wc3) * x(8)) + ...
-			lb * max(0, rk4(0, Pw3 / Pr3, 0, 0.01, Pfunc, x(3), x(8), FULL.W3));
+	f(3) = x(3) / ((1 - wc3) * x(7)) + ...
+			lb * max(0, rk4(0, Pw3 / Pr3, 0, 0.01, Pfunc, x(3), x(7), FULL.W3) ...
+					- (1 - (x(7) / (J3 * Pr3))));
 
-	f(4) = x(4) / ((1 - wc4) * x(9)) + ...
-			lb * max(0, rk4(0, Pw4 / Pr4, 0, 0.01, Pfunc, x(4), x(9), FULL.W4));
-        
-    f(5) = x(5) / ((1 - wc5) * x(10)) + ...
-			lb * max(0, rk4(0, Pw5 / Pr5, 0, 0.01, Pfunc, x(5), x(10), FULL.W5));
+	f(4) = x(4) / ((1 - wc4) * x(8)) + ...
+			lb * max(0, rk4(0, Pw4 / Pr4, 0, 0.01, Pfunc, x(4), x(8), FULL.W4) ...
+					- (1 - (x(8) / (J4 * Pr4))));
 end
