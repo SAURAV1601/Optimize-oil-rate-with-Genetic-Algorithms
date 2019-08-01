@@ -130,16 +130,16 @@ function data = get_data(well_data, create_one, create_full)
     % Condition
     
     con1 = struct();
-    con1.upper = [1 1 1 1 0.1 0.11 0.1 0.1];
-    con1.lower = [0 0 0 0 0   0    0   0];
+    con1.upper = [1 1 1 1 1 1 1 1];
+    con1.lower = [0 0 0 0 0 0 0 0];
     
     con2 = struct();
-    con2.upper = [1 1 1 1 0.07 0.077 0.07 0.07];
-    con2.lower = [0 0 0 0 0    0    0    0];
+    con2.upper = [1 1 1 1 1 1 1 1];
+    con2.lower = [0 0 0 0 0 0 0 0];
     
     con3 = struct();
-    con3.upper = [0.1 1 1   0.3 0.04 0.02 0.02 0.02];
-    con3.lower = [0   0 0.5 0.1   0    0     0    0];
+    con3.upper = [1 1 1 1 1 1 1 1];
+    con3.lower = [0 0 0 0 0 0 0 0];
     
     data.cons.con1 = con1;
     data.cons.con2 = con2;
