@@ -27,5 +27,8 @@ FULL = get(well_data, create_one, create_full);
 lower   = FULL.cons.con1.lower;
 upper   = FULL.cons.con1.upper;
 
+options = gaoptimset(@gamultiobj);
+options.PopulationSize = 100;
+
 [x, fval] = gamultiobj(fit, n_vars, [], [], [], [], lower, upper, const);
 
